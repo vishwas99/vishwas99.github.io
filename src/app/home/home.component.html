@@ -62,19 +62,19 @@
         <div class="row">
           <div class="col-md-2" style="margin-right: 5%;"></div>
           <div class="col-md-2 fadein">
-            <a href="https://angular.io/">
+            <a href="https://angular.io/" target="_blank">
               <img src="../../assets/images/icons/angular.png" class="logo-class" alt="Angular" title="Angular">
             </a>
           </div>
-          <div class="col-md-2 fadein">
+          <div class="col-md-2 fadein" target="_blank">
             <a href="#">
               <img src="../../assets/images/icons/html.png" class="logo-class" alt="HTML5" title="HTML5">
             </a>
           </div>
-          <div class="col-md-2 fadein">
+          <div class="col-md-2 fadein" target="_blank">
             <img src="../../assets/images/icons/css.png" class="logo-class" alt="CSS3" title="CSS3">
           </div>
-          <div class="col-md-2 fadein">
+          <div class="col-md-2 fadein" target="_blank">
             <a href="https://www.typescriptlang.org/">
               <img src="../../assets/images/icons/typescript.png" class="logo-class" alt="TypeScript" title="TypeScript">
             </a>
@@ -87,22 +87,22 @@
         <div class="row">
           <div class="col-md-2" style="margin-right: 5%;"></div>
           <div class="col-md-2 fadein">
-            <a href="https://www.java.com/en/">
+            <a href="https://www.java.com/en/" target="_blank">
               <img src="../../assets/images/icons/java.png" class="logo-class" alt="Java" title="Java">
             </a>
           </div>
           <div class="col-md-2 fadein">
-            <a href="https://spring.io/">
+            <a href="https://spring.io/" target="_blank">
               <img src="../../assets/images/icons/spring.png" class="logo-class"  alt="spring" title="spring">
             </a>
           </div>
           <div class="col-md-2 fadein">
-            <a href="https://www.mysql.com/">
+            <a href="https://www.mysql.com/" target="_blank">
               <img src="../../assets/images/icons/sql.png" class="logo-class" alt="SQL" title="SQL">
             </a>
           </div>
           <div class="col-md-2 fadein">
-            <a href="https://kafka.apache.org/">
+            <a href="https://kafka.apache.org/" target="_blank">
               <img src="../../assets/images/icons/kafka.png" class="logo-class" alt="kafka" title="kafka">
             </a>
           </div>
@@ -114,21 +114,21 @@
         <div class="row">
           <div class="col-md-2" style="margin-right: 5%;"></div>
           <div class="col-md-2 fadein">
-            <a href="https://www.python.org/">
+            <a href="https://www.python.org/" target="_blank">
               <img src="../../assets/images/icons/python.png" class="logo-class" alt="python" title="python">
             </a>
           </div>
-          <div class="col-md-2 fadein">
+          <div class="col-md-2 fadein" >
             <img src="../../assets/images/icons/datascience.png" class="logo-class" alt="datascience" title="datascience">
           </div>
           <div class="col-md-2 fadein">
-            <a href="https://www.docker.com/">
+            <a href="https://www.docker.com/" target="_blank">
               <img src="../../assets/images/icons/docker.png" class="logo-class" alt="docker" title="docker">
             </a>
           </div>
           <div class="col-md-2 fadein">
-            <a href="https://git-scm.com/">
-              <img src="../../assets/images/icons/git.png" class="logo-class fadein"  alt="git" title="git">
+            <a href="https://www.elastic.co/elastic-stack" target="_blank">
+              <img src="../../assets/images/icons/elk.svg" class="logo-class fadein"  alt="elk" title="elk">
             </a>
           </div>
         </div>
@@ -303,12 +303,13 @@
               </div>
           </div>
           <div class="timeline-step">
-              <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
-                  <div class="inner-circle"></div>
-                  <p class="h6 mt-3 mb-1">Now</p>
-                  <p class="h6 text-muted mb-0 mb-lg-0">Software Engineer 2 &#64; Cisco </p>
-              </div>
-          </div>
+            <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
+                <div class="inner-circle"></div>
+                <p class="h6 mt-3 mb-1">Now</p>
+                <p class="h6 text-muted mb-0 mb-lg-0">Senior Software Engineer &#64; Cisco </p>
+            </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -329,32 +330,32 @@
 
 
     <div class="row" style="background-color: black; padding-top: 2%;">
-      <div class="col-md-3"></div>
-      <div class="col-md-1" style="margin-left: 2%;">
-        <img src="../../assets/images/icons/linkedin.png" class="logo-class" alt="LinkedIn" title="Linked In">
+      <div class="col-md-4"></div>
+      <div class="col-md-1" >
+        <img src="../../assets/images/icons/linkedin.png" class="logo-class clickable-image" alt="LinkedIn" title="Linked In" (click)="redirect('linkedin')">
       </div>
       <div class="col-md-1">
-        <img src="../../assets/images/icons/github.png" class="logo-class" alt="Github" title="Github">
+        <img src="../../assets/images/icons/github.png" class="logo-class clickable-image" alt="Github" title="Github" (click)="redirect('github')">
       </div>
       <div class="col-md-1">
-        <img src="../../assets/images/icons/google.png" class="logo-class" alt="Github" title="Google">
+        <img src="../../assets/images/icons/google.png" class="logo-class clickable-image" alt="Google" title="Google" (click)="redirect('mail')">
       </div>
+      <!-- <div class="col-md-1">
+        <img src="../../assets/images/icons/discord.png" class="logo-class" alt="Discord" title="Discord" (click)="redirect('discord')">
+      </div> -->
+      <!-- <div class="col-md-1">
+        <img src="../../assets/images/icons/instagram.png" class="logo-class" alt="insta" title="insta" (click)="redirect('insta')">
+      </div> -->
       <div class="col-md-1">
-        <img src="../../assets/images/icons/discord.png" class="logo-class" alt="Github" title="Google">
-      </div>
-      <div class="col-md-1">
-        <img src="../../assets/images/icons/instagram.png" class="logo-class" alt="Github" title="Google">
-      </div>
-      <div class="col-md-1">
-        <img src="../../assets/images/icons/twitter.png" class="logo-class" alt="Github" title="Google">
+        <img src="../../assets/images/icons/twitter.png" class="logo-class clickable-image" alt="twitter" title="twitter" (click)="redirect('twitter')">
       </div>
       <div class="col-md-4"></div>
     </div>
 
 
-    <div class="row" style="background-color: black; padding-top: 1%; padding-bottom: 5%; top: 15%;">
-      <div class="col-md-4"></div>
-      <div class="col-md-6">
+    <!-- <div class="row" style="background-color: black; padding-top: 1%; padding-bottom: 5%; top: 15%;">
+      <div class="col-md-5"></div>
+      <div class="col-md-4">
         <div class="text-left" style="padding-top: 2%;">
           <button type="button" (click)="scrollToDiv('home')" class="button-header btn-sm" style="margin-left: 20px;">Home</button>
           <button type="button" (click)="scrollToDiv('skillSet')" class="button-header btn-sm" style="margin-left: 20px;">My Skills</button>
@@ -363,23 +364,19 @@
           <button type="button" (click)="scrollToDiv('letsconnect')" class="button-header btn-sm" style="margin-left: 20px;">Let's Connect</button>
         </div>
       </div>
+    </div> -->
 
-      <!-- <div style="padding-top: 1%; text-align: center;">
-        <span class="text-center" style="color: white; font-size: xx-small;">2024  -  Vishwas K H personal portfolio. Contact Me to know more.</span>
-      </div> -->
-      <!-- <div class="row-connect">
-        <div class="col-md-4"></div>
-        <div class="col-md-4" style="margin: 10px 0px 10px 0px; display: flex; z-index: auto; position: relative; justify-content: center;">
-          <div>
-            <p>
-              <span style="color: rgb(255, 255, 255); font-weight: 100; font-size: smaller;"> 2024 - Vishwas K.H's Design Portfolio. India </span>
-              <a href="https://www.marcosrezende.com/privacy-policy" style="color: rgb(255, 255, 255);" class="link--external" data-brz-link-type="external">Privacy policy</a>
-              <span style="color: rgb(255, 255, 255);">.</span>
-            </p>
-          </div>
+    <div class="row" style="background-color: black; padding-top: 1%; padding-bottom: 5%; top: 15%;">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="text-left" style="padding-top: 2%; padding-left: 5%;">
+          <button type="button" (click)="scrollToDiv('home')" class="button-header btn-sm">Home</button>
+          <button type="button" (click)="scrollToDiv('skillSet')" class="button-header btn-sm" style="margin-left: 40px;">My Skills</button>
+          <button type="button" (click)="scrollToDiv('projects')" class="button-header btn-sm" style="margin-left: 40px;">Projects</button>
+          <button type="button" (click)="scrollToDiv('experience')" class="button-header btn-sm" style="margin-left: 40px;">Experience</button>
+          <button type="button" (click)="scrollToDiv('letsconnect')" class="button-header btn-sm" style="margin-left: 40px;">Let's Connect</button>
         </div>
-      </div> -->
-
+      </div>
     </div>
 
   </div>

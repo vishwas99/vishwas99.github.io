@@ -20,6 +20,7 @@ export class HomeComponent {
   email: string = "vishwasravali@gmail.com";
   linkedIn: string = "https://www.linkedin.com/in/vishwas-k-h-bb6a98189/";
   gitHub: string = "https://github.com/vishwas99";
+  twitter: string = "https://x.com/khvat99"
   projects: string[] = ["Project 1", "Project 2", "Project 3"];
   skills: string[] = ["Skill 1", "Skill 2", "Skill 3"];
 
@@ -54,6 +55,28 @@ export class HomeComponent {
       this.homeRef.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
+  }
+
+  redirect(link: string){
+    if(link == "linkedin"){
+      // Open linkedin in new tab
+      window.open(this.linkedIn, "_blank");
+    }else if(link == "gitHub"){
+      // Open github in new tab
+      window.open(this.gitHub, "_blank");
+    }else if(link == "mail"){
+      // Open email in new tab
+      window.open("mailto:"+this.email, "_blank");
+    }else if(link == "discord"){
+      // Open discord in new tab
+      window.open("https://discord.com/channels/@me", "_blank");
+    }else if(link == "Insta"){
+      // Open instagram in new tab
+      window.open("https://www.instagram.com/", "_blank");
+    }else if(link == "twitter"){
+      // Open twitter in new tab
+      window.open("https://twitter.com/", "_blank");
+    }
   }
 
 }

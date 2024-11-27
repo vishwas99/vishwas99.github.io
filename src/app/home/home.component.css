@@ -85,7 +85,7 @@
 .logo-class {
   height: auto;
   width: 30%;
-  background: transparent;
+  background: white;
   object-fit: contain;
   margin-right: 20%;
 }
@@ -363,4 +363,8 @@ a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:a
 .row-connect {
   display: flex;
   justify-content: center;
+}
+
+.clickable-image {
+  cursor: pointer;
 }
