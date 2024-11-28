@@ -28,3 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # portfolio
 Vishwas's Professional portfolio
 
+# For Deploying in Production in Github pages run following commands
+1. Make necessary changes in the main branch and commit the code
+2. ng build --configuration production - Build the code to dist folder
+3. npx angular-cli-ghpages --dir=dist/minerva/browser --no-silent - Using ghpages push the built item to gh_pages branch with this command
