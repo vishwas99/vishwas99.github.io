@@ -61,7 +61,7 @@ export class HomeComponent {
     if(link == "linkedin"){
       // Open linkedin in new tab
       window.open(this.linkedIn, "_blank");
-    }else if(link == "gitHub"){
+    }else if(link == "github"){
       // Open github in new tab
       window.open(this.gitHub, "_blank");
     }else if(link == "mail"){
