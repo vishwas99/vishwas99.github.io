@@ -1,4 +1,4 @@
-export type ProjectStatus = 'active' | 'shipped' | 'archived' | 'wip';
+export type ProjectStatus = 'active' | 'shipped' | 'archived' | 'wip' | 'MVP shipped';
 
 export interface LinkRef {
   label: string;
