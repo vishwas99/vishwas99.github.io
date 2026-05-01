@@ -1,0 +1,26 @@
+<section id="experience" class="section">
+  <div class="page">
+    <p class="section-label" appReveal>experience</p>
+
+    <ol class="xp">
+      <li
+        *ngFor="let item of items; let i = index"
+        class="xp__item"
+        appReveal
+        [revealDelay]="i * 70">
+        <div class="xp__period">{{ item.period }}</div>
+        <div class="xp__body">
+          <h3 class="xp__role">
+            {{ item.role }}
+            <span class="xp__at">&#64;</span>
+            <span class="xp__company">{{ item.company }}</span>
+          </h3>
+          <p *ngIf="item.location" class="xp__location">{{ item.location }}</p>
+          <ul *ngIf="item.bullets?.length" class="xp__bullets">
+            <li *ngFor="let b of item.bullets">{{ b }}</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>

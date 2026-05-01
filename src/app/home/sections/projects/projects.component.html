@@ -1,0 +1,29 @@
+<section [id]="sectionId" class="section">
+  <div class="page projects">
+    <p class="section-label" appReveal>{{ label }}</p>
+
+    <div class="projects__head" appReveal [revealDelay]="60">
+      <h2 class="projects__title">{{ title }}</h2>
+      <p *ngIf="blurb" class="projects__blurb">{{ blurb }}</p>
+    </div>
+
+    <div *ngIf="items.length > 0; else empty" class="projects__grid">
+      <div
+        *ngFor="let project of items; let i = index"
+        appReveal
+        [revealDelay]="i * 80">
+        <app-project-card [project]="project"></app-project-card>
+      </div>
+    </div>
+
+    <ng-template #empty>
+      <div class="projects__empty" appReveal>
+        <p class="projects__empty-line">
+          <span class="projects__empty-prompt">$</span>
+          ls ./{{ sectionId }}
+        </p>
+        <p class="projects__empty-hint">{{ emptyMessage }}</p>
+      </div>
+    </ng-template>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+<section id="contact" class="section">
+  <div class="page contact">
+    <p class="section-label" appReveal>contact</p>
+
+    <div class="contact__head" appReveal [revealDelay]="60">
+      <h2 class="contact__title">
+        Say hello.
+        <span class="contact__caret" aria-hidden="true">_</span>
+      </h2>
+      <p class="contact__copy">
+        Best reached by email or the links below. I read everything, and I reply when I can.
+      </p>
+    </div>
+
+    <div class="contact__terminal" appReveal [revealDelay]="140">
+      <div class="contact__row">
+        <span class="contact__prompt">$</span>
+        <span class="contact__cmd">mail</span>
+        <a class="contact__value link-underline" [attr.href]="'mailto:' + email">
+          {{ email }}
+        </a>
+      </div>
+
+      <div class="contact__row" *ngFor="let s of socials">
+        <span class="contact__prompt">$</span>
+        <span class="contact__cmd">open</span>
+        <span class="contact__flag">--{{ s.label }}</span>
+        <a
+          class="contact__value link-underline"
+          [href]="s.href"
+          target="_blank"
+          rel="noopener noreferrer">
+          {{ s.handle }}
+        </a>
+      </div>
+    </div>
+
+    <footer class="contact__footer">
+      <span>© {{ year }} {{ name }}</span>
+      <span class="contact__footer-sep">·</span>
+      <span>built with care</span>
+    </footer>
+  </div>
+</section>

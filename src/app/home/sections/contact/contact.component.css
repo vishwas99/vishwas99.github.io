@@ -1,0 +1,67 @@
+.contact__head {
+  max-width: 52ch;
+  margin-bottom: 28px;
+}
+
+.contact__title {
+  font-family: var(--font-mono);
+  font-size: clamp(1.4rem, 3vw, 1.7rem);
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.contact__caret {
+  color: var(--accent);
+  margin-left: 3px;
+  animation: caret-blink 1.05s steps(1) infinite;
+}
+
+.contact__copy {
+  color: var(--muted);
+  margin: 0;
+}
+
+.contact__terminal {
+  border: var(--hairline);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--text-dim);
+}
+
+.contact__prompt { color: var(--accent); }
+.contact__cmd    { color: var(--text); }
+.contact__flag   { color: var(--faint); font-size: 0.86em; }
+.contact__value  { color: var(--text); }
+.contact__value:hover { color: var(--accent); }
+
+.contact__footer {
+  margin-top: 40px;
+  padding-top: 18px;
+  border-top: var(--hairline-soft);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--faint);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.contact__footer-sep { color: var(--border); }
+
+@media (prefers-reduced-motion: reduce) {
+  .contact__caret { animation: none; opacity: 0.6; }
+}

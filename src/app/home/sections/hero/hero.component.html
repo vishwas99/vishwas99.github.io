@@ -1,0 +1,31 @@
+<section id="hero" class="hero section">
+  <div class="page">
+    <p class="hero__greeting" appReveal>
+      <span class="hero__prompt">$</span>
+      <span>whoami</span>
+    </p>
+
+    <h1 class="hero__name" appReveal [revealDelay]="80">
+      {{ identity.name }}<span class="hero__caret" aria-hidden="true">_</span>
+    </h1>
+
+    <p class="hero__role" appReveal [revealDelay]="160">
+      {{ identity.role }}
+      <ng-container *ngIf="identity.company">
+        <span class="hero__sep">·</span>{{ identity.company }}
+      </ng-container>
+      <ng-container *ngIf="identity.location">
+        <span class="hero__sep">·</span>{{ identity.location }}
+      </ng-container>
+    </p>
+
+    <p class="hero__tagline" appReveal [revealDelay]="240">
+      {{ identity.tagline }}
+    </p>
+
+    <div class="hero__pill" *ngIf="identity.availability" appReveal [revealDelay]="320">
+      <span class="hero__dot"></span>
+      {{ identity.availability }}
+    </div>
+  </div>
+</section>

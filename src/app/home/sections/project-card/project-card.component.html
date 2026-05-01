@@ -1,0 +1,32 @@
+<article class="card">
+  <header class="card__head">
+    <h3 class="card__title">{{ project.title }}</h3>
+    <span *ngIf="project.status" class="card__status" [attr.data-status]="project.status">
+      {{ project.status }}
+    </span>
+  </header>
+
+  <p *ngIf="project.period" class="card__period">{{ project.period }}</p>
+
+  <p class="card__summary">{{ project.summary }}</p>
+
+  <p *ngIf="project.description" class="card__description">
+    {{ project.description }}
+  </p>
+
+  <ul *ngIf="project.tech?.length" class="card__tech">
+    <li *ngFor="let t of project.tech" class="chip">{{ t }}</li>
+  </ul>
+
+  <footer *ngIf="project.links?.length" class="card__links">
+    <a
+      *ngFor="let link of project.links"
+      class="card__link link-underline"
+      [href]="link.href"
+      target="_blank"
+      rel="noopener noreferrer">
+      {{ link.label }}
+      <span aria-hidden="true">↗</span>
+    </a>
+  </footer>
+</article>

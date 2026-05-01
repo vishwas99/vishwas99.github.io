@@ -1,0 +1,29 @@
+<section id="about" class="section">
+  <div class="page about">
+    <p class="section-label" appReveal>about</p>
+
+    <div class="about__grid">
+      <div class="about__bio">
+        <p
+          *ngFor="let para of about.bio; let i = index"
+          class="about__para"
+          appReveal
+          [revealDelay]="i * 60">
+          {{ para }}
+        </p>
+      </div>
+
+      <aside class="about__facts" appReveal [revealDelay]="120">
+        <p class="about__facts-head">
+          <span class="about__prompt">$</span> cat ~/whoami
+        </p>
+        <dl class="about__facts-list">
+          <ng-container *ngFor="let fact of about.facts">
+            <dt>{{ fact.label }}</dt>
+            <dd>{{ fact.value }}</dd>
+          </ng-container>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>

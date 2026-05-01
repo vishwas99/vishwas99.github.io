@@ -1,0 +1,16 @@
+<header class="nav" [class.nav--scrolled]="scrolled()">
+  <div class="nav__inner page">
+    <a class="nav__brand" href="#hero" (click)="scrollTo('hero', $event)">
+      <span class="nav__prompt">~/</span>{{ identity.handle }}
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a
+        *ngFor="let item of items"
+        [attr.href]="'#' + item.id"
+        (click)="scrollTo(item.id, $event)"
+        class="nav__link">
+        {{ item.label }}
+      </a>
+    </nav>
+  </div>
+</header>

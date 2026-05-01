@@ -1,0 +1,23 @@
+<section *ngIf="entries?.length" id="writing" class="section">
+  <div class="page">
+    <p class="section-label" appReveal>writing</p>
+
+    <ul class="writing">
+      <li
+        *ngFor="let entry of entries; let i = index"
+        class="writing__item"
+        appReveal
+        [revealDelay]="i * 60">
+        <a
+          class="writing__link link-underline"
+          [href]="entry.href"
+          target="_blank"
+          rel="noopener noreferrer">
+          {{ entry.label }}
+          <span aria-hidden="true" class="writing__arrow">↗</span>
+        </a>
+        <span *ngIf="entry.date" class="writing__date">{{ entry.date }}</span>
+      </li>
+    </ul>
+  </div>
+</section>

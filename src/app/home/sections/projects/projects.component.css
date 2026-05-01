@@ -1,0 +1,46 @@
+.projects__head {
+  margin-bottom: 28px;
+  max-width: 58ch;
+}
+
+.projects__title {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.projects__blurb {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.projects__empty {
+  border: 1px dashed var(--border);
+  padding: 22px;
+  background: var(--bg-elev);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+}
+
+.projects__empty-line {
+  color: var(--text-dim);
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+}
+.projects__empty-prompt {
+  color: var(--accent);
+  margin-right: 6px;
+}
+.projects__empty-hint {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0;
+}

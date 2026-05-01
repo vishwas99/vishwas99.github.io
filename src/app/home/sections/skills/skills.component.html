@@ -1,0 +1,18 @@
+<section id="skills" class="section">
+  <div class="page skills">
+    <p class="section-label" appReveal>stack</p>
+
+    <div class="skills__list">
+      <div
+        *ngFor="let group of groups; let i = index"
+        class="skills__row"
+        appReveal
+        [revealDelay]="i * 70">
+        <p class="skills__label">{{ group.label }}</p>
+        <ul class="skills__chips">
+          <li *ngFor="let item of group.items" class="chip">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
